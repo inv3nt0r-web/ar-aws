@@ -154,6 +154,14 @@
     .rules div{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
     .rules b{display:block;font:700 1.3rem system-ui;color:var(--leaf)}
     .rules span{font:.88rem/1.45 system-ui;color:var(--muted)}
+    .vs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+    .vs>div{border-radius:14px;padding:18px 20px;border:1px solid var(--line)}
+    .vs-a{background:#2a2117;border-color:#5a4630!important}
+    .vs-a b{color:#e3b98a}
+    .vs-b{background:var(--panel2);border-color:var(--moss)!important}
+    .vs-b b{color:var(--leaf)}
+    .vs b{display:block;font-family:system-ui,sans-serif;margin-bottom:8px}
+    .vs ul{margin:0 0 0 18px}.vs li{font-size:.93rem;color:#d8e6de;margin:5px 0}
     figure{margin:30px 0}
     figure img{width:100%;border-radius:12px;border:1px solid var(--line);background:#fff}
     figcaption{font-family:system-ui,sans-serif;font-size:.8rem;color:var(--muted);margin-top:8px}
@@ -165,7 +173,7 @@
     .box .label{font-family:system-ui,sans-serif;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--moss)}
     footer{border-top:1px solid var(--line);padding:30px 20px;text-align:center;color:var(--muted);font-family:system-ui,sans-serif;font-size:.8rem}
 
-    @media(max-width:860px){.mosaic-wrap,.rules{grid-template-columns:1fr}.ba{aspect-ratio:16/9}.swaps{grid-template-columns:1fr}.big,.ring{grid-template-columns:1fr}.who{grid-template-columns:repeat(2,1fr)}.steps,.cap{grid-template-columns:1fr}.pillars{grid-template-columns:repeat(2,1fr)}.stage{aspect-ratio:16/9}body{font-size:17px}}
+    @media(max-width:860px){.vs{grid-template-columns:1fr}.mosaic-wrap,.rules{grid-template-columns:1fr}.ba{aspect-ratio:16/9}.swaps{grid-template-columns:1fr}.big,.ring{grid-template-columns:1fr}.who{grid-template-columns:repeat(2,1fr)}.steps,.cap{grid-template-columns:1fr}.pillars{grid-template-columns:repeat(2,1fr)}.stage{aspect-ratio:16/9}body{font-size:17px}}
   </style>
 </head>
 <body>
@@ -257,6 +265,29 @@
         <div class="stat"><b>60–80 T€</b><span>Überschuss pro Jahr auf 50 ha bei gesichertem Absatz plausibel</span></div>
       </div>
     </div>
+
+    <h3 class="sub3" style="margin-top:40px">Dauerbaustelle oder Selbstläufer?</h3>
+    <div class="vs">
+      <div class="vs-a"><b>Entwässerung heute – eine Spirale ohne Ende</b>
+        <ul>
+          <li>Gräben müssen immer wieder geräumt werden</li>
+          <li>Schöpfwerke pumpen Jahr für Jahr – mit Strom und Wartung</li>
+          <li>Der Torf sackt, also muss tiefer entwässert werden</li>
+          <li>Das Grundwasser sinkt weiter, Dürrejahre kosten die Ernte</li>
+          <li>Dränagen altern und müssen erneuert werden</li>
+        </ul>
+      </div>
+      <div class="vs-b"><b>AR-AWS – einmal bauen, dann arbeitet die Natur</b>
+        <ul>
+          <li>Wasser wird gehalten, nicht weggepumpt – ein Stauwehr statt Pumpen</li>
+          <li>Die Weidetiere pflegen das Grünland</li>
+          <li>Fische liefern den Dünger, Pflanzen reinigen das Wasser</li>
+          <li>Der Torf wächst wieder, statt zu verschwinden</li>
+          <li>Wenig Unterhalt: Deiche und Stauanlagen kontrollieren, mähen, Beete umsetzen</li>
+        </ul>
+      </div>
+    </div>
+    <p class="intro" style="margin-top:14px">Dazu kommen Förderung für den Umbau, stabile Erträge auch in Dürrejahren, ein gutes Ansehen in der Region – und die Rolle als Pionier, der zeigt, wie es geht.</p>
 
     <div class="streams">
       <span>🥬 Brunnenkresse & Gemüse von Schwimmbeeten</span><span>🐟 Heimischer Fisch aus Havel & Elbe, Direktvermarktung</span><span>🐃 Wasserbüffel- & Rinderweide</span><span>🌾 GAP-Förderung bleibt erhalten</span><span>💶 ANK- & Moorbodenschutz-Programme</span><span>🏗️ Rohrkolben & Schilf als Bau- und Dämmstoff</span><span>🚣 Führungen, Bildung, Forschung</span><span>🥡 Berliner Markt in Reichweite</span>
