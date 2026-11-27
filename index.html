@@ -8,11 +8,11 @@
   <link rel="canonical" href="https://inv3nt0r-web.github.io/ar-aws/">
   <meta property="og:title" content="Das Luch wieder nass machen – und damit Geld verdienen">
   <meta property="og:description" content="Vom entwässerten Acker zurück zur produktiven Auenlandschaft: Win-win für Landwirte, Klima und Natur. Offenes Konzept mit 10-ha-Pilotkern.">
-  <meta property="og:image" content="https://inv3nt0r-web.github.io/ar-aws/luch.jpg">
+  <meta property="og:image" content="https://inv3nt0r-web.github.io/ar-aws/img/morgen.jpg">
   <meta property="og:url" content="https://inv3nt0r-web.github.io/ar-aws/">
   <meta property="og:type" content="article">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://inv3nt0r-web.github.io/ar-aws/luch.jpg">
+  <meta name="twitter:image" content="https://inv3nt0r-web.github.io/ar-aws/img/morgen.jpg">
   <meta name="citation_title" content="Das Aquaponisch-Retentionsbasierte Agrarsystem (AR-AWS): Renaturierung der historischen Luch-Wasserlandschaft – Konzept-Dossier v1.0">
   <meta name="citation_author" content="Seyffarth, Daniel">
   <meta name="citation_publication_date" content="2026/10">
@@ -36,8 +36,9 @@
 
     /* HERO */
     .hero{position:relative;min-height:clamp(560px,92vh,820px);display:flex;align-items:flex-end;overflow:hidden;background:#cfe3dc}
-    .hero svg.scene{position:absolute;inset:0;width:100%;height:100%}
-    .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,26,22,0) 35%,rgba(15,26,22,.55) 70%,rgba(15,26,22,.95) 100%)}
+    .hero img.scene{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;animation:kenburns 28s ease-in-out infinite alternate}
+    @keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.14) translate(-1.5%,1%)}}
+    .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,26,22,.05) 0%,rgba(15,26,22,0) 30%,rgba(15,26,22,.55) 70%,rgba(15,26,22,.95) 100%)}
     .hero .copy{position:relative;z-index:2;max-width:980px;margin:0 auto;padding:0 24px 64px;text-align:center}
     .eyebrow{font-family:system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;color:var(--reed2)}
     .hero h1{font-size:clamp(2.2rem,6vw,4.2rem);line-height:1.05;margin:12px 0 14px;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.45)}
@@ -54,7 +55,7 @@
     @keyframes fly{from{transform:translate(-160px,0)}to{transform:translate(1400px,-60px)}}
     .boat{animation:bob 4s ease-in-out infinite alternate}
     @keyframes bob{from{transform:translate(0,0)}to{transform:translate(6px,-3px)}}
-    @media (prefers-reduced-motion:reduce){.wave,.wave2,.crane,.boat{animation:none}}
+    @media (prefers-reduced-motion:reduce){.hero img.scene{animation:none}}
 
     .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
     section.block{padding:80px 0}
@@ -66,9 +67,10 @@
     .tabs{display:flex;gap:8px;margin:28px 0 16px;flex-wrap:wrap}
     .tabs button{font-family:system-ui,sans-serif;font-size:.95rem;font-weight:600;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:10px 20px;border-radius:999px;cursor:pointer;transition:.25s}
     .tabs button.on{background:var(--moss);color:#0c1712;border-color:var(--moss)}
-    .stage{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/8;background:#0c1511}
-    .stage svg{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .7s ease}
-    .stage svg.on{opacity:1}
+    .stage{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:2.95/1;background:#0c1511}
+    .stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity 1s ease,transform 6s ease}
+    .stage img.on{opacity:1;transform:scale(1)}
+    .stage .tag{position:absolute;left:16px;top:14px;background:rgba(12,23,18,.75);backdrop-filter:blur(6px);color:#fff;font:700 .85rem system-ui;padding:6px 12px;border-radius:999px;border:1px solid var(--line)}
     .cap{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
     .cap div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:.92rem;color:var(--muted);transition:.3s}
     .cap div.on{border-color:var(--moss);color:var(--text);background:var(--panel2)}
@@ -127,6 +129,15 @@
     .swaps small{display:block;color:var(--muted);font-family:system-ui,sans-serif;font-size:.8rem;margin-top:6px;line-height:1.45}
     .sub3{font-family:system-ui,sans-serif;font-size:1.05rem;color:#fff;margin:34px 0 0;letter-spacing:.02em}
     .pillars div i{float:right;font-style:normal;font-size:.7rem;color:var(--reed2);border:1px solid var(--line);border-radius:6px;padding:0 5px}
+    .ba{position:relative;margin-top:16px;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:2.95/1;--p:50%}
+    .ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .ba-top{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--p)) 0 0)}
+    .ba-line{position:absolute;top:0;bottom:0;left:var(--p);width:3px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.6);transform:translateX(-50%)}
+    .ba-line:after{content:"⇆";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;background:#fff;color:#13241e;display:grid;place-items:center;font:700 1.1rem system-ui}
+    .ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize}
+    .ba-l,.ba-r{position:absolute;top:14px;background:rgba(12,23,18,.75);color:#fff;font:700 .85rem system-ui;padding:6px 12px;border-radius:999px}
+    .ba-l{left:14px}.ba-r{right:14px}
+    .photo-band{width:100%;aspect-ratio:2.95/1;object-fit:cover;border-radius:16px;border:1px solid var(--line);margin:22px 0 6px}
     figure{margin:30px 0}
     figure img{width:100%;border-radius:12px;border:1px solid var(--line);background:#fff}
     figcaption{font-family:system-ui,sans-serif;font-size:.8rem;color:var(--muted);margin-top:8px}
@@ -138,48 +149,14 @@
     .box .label{font-family:system-ui,sans-serif;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--moss)}
     footer{border-top:1px solid var(--line);padding:30px 20px;text-align:center;color:var(--muted);font-family:system-ui,sans-serif;font-size:.8rem}
 
-    @media(max-width:860px){.swaps{grid-template-columns:1fr}.big,.ring{grid-template-columns:1fr}.who{grid-template-columns:repeat(2,1fr)}.steps,.cap{grid-template-columns:1fr}.pillars{grid-template-columns:repeat(2,1fr)}.stage{aspect-ratio:4/3}body{font-size:17px}}
+    @media(max-width:860px){.ba{aspect-ratio:16/9}.swaps{grid-template-columns:1fr}.big,.ring{grid-template-columns:1fr}.who{grid-template-columns:repeat(2,1fr)}.steps,.cap{grid-template-columns:1fr}.pillars{grid-template-columns:repeat(2,1fr)}.stage{aspect-ratio:16/9}body{font-size:17px}}
   </style>
 </head>
 <body>
 
 <!-- ======================= HERO ======================= -->
 <header class="hero">
-  <svg class="scene" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <defs>
-      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6d9a8"/><stop offset=".45" stop-color="#cfe3dc"/><stop offset="1" stop-color="#a9cfc4"/></linearGradient>
-      <linearGradient id="wat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fc6dc"/><stop offset="1" stop-color="#3f7f9c"/></linearGradient>
-      <radialGradient id="sunG"><stop offset="0" stop-color="#fff3cf"/><stop offset=".5" stop-color="#f6d68a" stop-opacity=".8"/><stop offset="1" stop-color="#f6d68a" stop-opacity="0"/></radialGradient>
-    </defs>
-    <rect width="1200" height="800" fill="url(#sky)"/>
-    <circle cx="880" cy="250" r="160" fill="url(#sunG)"/>
-    <circle cx="880" cy="250" r="46" fill="#fff1c8"/>
-    <!-- ferne Ländchen mit Wald -->
-    <path d="M0 430 C120 390 220 400 330 420 C420 380 520 385 610 415 C720 395 800 380 920 410 C1010 395 1110 400 1200 420 L1200 470 L0 470Z" fill="#7fa58f"/>
-    <path d="M60 425 q12-40 24 0 q10-34 22 0 q14-46 28 0 q10-30 20 0 M700 410 q12-44 26 0 q12-36 24 0 q12-40 26 0 q10-30 22 0 M960 412 q10-30 20 0 q12-40 24 0" fill="#5f8a74"/>
-    <!-- Dorf auf dem Ländchen -->
-    <g fill="#8b6e52"><rect x="420" y="398" width="22" height="16"/><polygon points="416,400 431,386 446,400"/><rect x="452" y="402" width="16" height="12"/><polygon points="449,404 460,394 471,404"/><rect x="478" y="380" width="6" height="34"/><polygon points="474,382 481,366 488,382"/></g>
-    <!-- Röhricht / Wiesen -->
-    <path d="M0 470 L1200 470 L1200 560 C900 540 600 585 300 560 C180 550 80 560 0 565Z" fill="#b9c98a"/>
-    <!-- Wasser -->
-    <path d="M0 560 C300 540 600 600 900 560 C1020 545 1120 550 1200 560 L1200 800 L0 800Z" fill="url(#wat)"/>
-    <g class="wave" stroke="#d6eef7" stroke-width="2" fill="none" opacity=".6"><path d="M80 620 q30-8 60 0 t60 0"/><path d="M420 660 q30-8 60 0 t60 0 t60 0"/><path d="M820 610 q30-8 60 0 t60 0"/></g>
-    <g class="wave2" stroke="#d6eef7" stroke-width="2" fill="none" opacity=".45"><path d="M220 700 q30-8 60 0 t60 0"/><path d="M640 730 q30-8 60 0 t60 0 t60 0"/><path d="M980 690 q30-8 60 0 t60 0"/></g>
-    <!-- Schilf vorne -->
-    <g stroke="#7a6a2e" stroke-width="3" stroke-linecap="round">
-      <path d="M40 800 Q46 650 30 560"/><path d="M60 800 Q70 640 80 540"/><path d="M85 800 Q90 680 70 600"/><path d="M110 800 Q115 660 125 575"/>
-      <path d="M1090 800 Q1080 650 1100 560"/><path d="M1120 800 Q1115 640 1135 545"/><path d="M1150 800 Q1150 670 1165 590"/><path d="M1175 800 Q1185 660 1190 570"/>
-    </g>
-    <g fill="#6b4a26"><ellipse cx="31" cy="560" rx="6" ry="22"/><ellipse cx="80" cy="542" rx="6" ry="22"/><ellipse cx="125" cy="576" rx="5" ry="18"/><ellipse cx="1100" cy="560" rx="6" ry="22"/><ellipse cx="1135" cy="546" rx="6" ry="22"/><ellipse cx="1190" cy="570" rx="5" ry="18"/></g>
-    <!-- Boot -->
-    <g class="boat"><path d="M560 600 L660 600 L645 616 L575 616Z" fill="#5b3b22"/><line x1="612" y1="600" x2="612" y2="555" stroke="#3a2614" stroke-width="3"/><circle cx="600" cy="590" r="6" fill="#3a2614"/><rect x="595" y="590" width="10" height="12" fill="#3a2614"/></g>
-    <!-- Kraniche -->
-    <g fill="none" stroke="#33433b" stroke-width="3" stroke-linecap="round">
-      <path class="crane" d="M0 170 q14-12 28 0 q14-12 28 0"/>
-      <path class="crane b" d="M0 210 q12-10 24 0 q12-10 24 0"/>
-      <path class="crane c" d="M0 140 q10-8 20 0 q10-8 20 0"/>
-    </g>
-  </svg>
+  <img class="scene" src="img/hero.jpg" alt="Nebliges Luch bei Sonnenaufgang mit Kranichen, Fischerkahn und Dorf auf dem Ländchen">
   <div class="veil"></div>
   <div class="copy">
     <span class="eyebrow">Offenes Konzept · Havelland · AR-AWS</span>
@@ -206,65 +183,25 @@
     </div>
 
     <div class="stage">
-      <!-- DAMALS -->
-      <svg class="on" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-label="Um 1700: nasse Luchlandschaft mit Ländchen, Fließen und Booten">
-        <rect width="800" height="400" fill="#cfe6dc"/>
-        <rect y="150" width="800" height="250" fill="#a9c98e"/>
-        <path d="M0 260 C120 230 200 300 330 270 C460 240 520 310 650 280 C720 265 760 270 800 262 L800 300 C760 305 720 300 650 318 C520 350 460 280 330 310 C200 340 120 270 0 300Z" fill="#6aa9c6"/>
-        <ellipse cx="560" cy="200" rx="70" ry="22" fill="#7cb7d0"/><ellipse cx="170" cy="345" rx="80" ry="24" fill="#7cb7d0"/>
-        <path d="M60 180 C90 140 200 140 230 180 C200 205 90 205 60 180Z" fill="#d8bf8a"/>
-        <path d="M600 330 C630 295 730 295 760 330 C730 355 630 355 600 330Z" fill="#d8bf8a"/>
-        <g fill="#8b6e52"><rect x="120" y="165" width="14" height="10"/><rect x="142" y="168" width="10" height="8"/><rect x="660" y="318" width="14" height="10"/></g>
-        <g fill="#4f7d5e"><circle cx="300" cy="175" r="14"/><circle cx="318" cy="170" r="12"/><circle cx="335" cy="178" r="13"/><circle cx="440" cy="168" r="12"/><circle cx="456" cy="174" r="14"/><circle cx="500" cy="360" r="12"/><circle cx="515" cy="366" r="11"/></g>
-        <g stroke="#8a7a3a" stroke-width="2"><path d="M20 400 V350 M30 400 V340 M40 400 V355 M770 250 V220 M780 250 V212 M790 250 V225 M380 240 V215 M390 240 V208"/></g>
-        <g><path d="M340 283 L380 283 L374 290 L346 290Z" fill="#5b3b22"/><line x1="360" y1="283" x2="360" y2="262" stroke="#3a2614" stroke-width="2"/></g>
-        <g fill="none" stroke="#2f3d36" stroke-width="2"><path d="M420 70 q8-7 16 0 q8-7 16 0"/><path d="M455 90 q7-6 14 0 q7-6 14 0"/><path d="M390 95 q6-5 12 0 q6-5 12 0"/></g>
-        <text x="20" y="34" font-family="system-ui" font-size="18" font-weight="700" fill="#1f3a31">Um 1700 · Luch und Ländchen</text>
-        <text x="20" y="56" font-family="system-ui" font-size="13" fill="#2f4d42">Fließe, Röhricht, Bruchwald · Fisch, Heu, Rohr · Verkehr per Boot</text>
-      </svg>
-      <!-- HEUTE -->
-      <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-label="Heute: entwässert mit geraden Gräben, Schöpfwerk und trockenem Boden">
-        <rect width="800" height="400" fill="#e8dcc4"/>
-        <rect y="150" width="800" height="250" fill="#cdb48a"/>
-        <g stroke="#b39a6e" stroke-width="1"><path d="M0 170 H800 M0 195 H800 M0 225 H800 M0 260 H800 M0 300 H800 M0 345 H800"/></g>
-        <g stroke="#6a9fb8" stroke-width="5"><path d="M0 250 H800"/><path d="M200 150 V400"/><path d="M420 150 V400"/><path d="M630 150 V400"/></g>
-        <path d="M60 180 C90 140 200 140 230 180 C200 205 90 205 60 180Z" fill="#c9a874"/>
-        <rect x="740" y="232" width="40" height="36" fill="#2b2f33"/><polygon points="736,234 760,214 784,234" fill="#3b4045"/>
-        <g fill="#7d6a4f"><rect x="480" y="300" width="46" height="22" rx="4"/><circle cx="490" cy="326" r="9"/><circle cx="518" cy="326" r="7"/></g>
-        <g fill="#cbb18a" opacity=".7"><circle cx="540" cy="306" r="10"/><circle cx="560" cy="300" r="14"/><circle cx="585" cy="296" r="9"/></g>
-        <g fill="#8e7b5a"><path d="M300 320 l6-14 6 14z M330 330 l5-12 5 12z M260 360 l6-14 6 14z"/></g>
-        <text x="20" y="34" font-family="system-ui" font-size="18" font-weight="700" fill="#4a3a22">Heute · entwässert</text>
-        <text x="20" y="56" font-family="system-ui" font-size="13" fill="#5e4b2e">Gerade Gräben, Dränagen, Schöpfwerk · Torfschwund, CO₂, Dürre-Ernten</text>
-        <text x="745" y="290" font-family="system-ui" font-size="11" fill="#2b2f33">Schöpfwerk</text>
-      </svg>
-      <!-- MORGEN -->
-      <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-label="Morgen mit AR-AWS: renaturiert und produktiv mit Schwimmbeeten, Fisch, Paludikultur und Booten">
-        <rect width="800" height="400" fill="#d6ece4"/>
-        <circle cx="690" cy="70" r="26" fill="#f6d68a"/>
-        <rect y="150" width="800" height="250" fill="#9fcf8e"/>
-        <path d="M0 260 C120 230 200 300 330 270 C460 240 520 310 650 280 C720 265 760 270 800 262 L800 300 C760 305 720 300 650 318 C520 350 460 280 330 310 C200 340 120 270 0 300Z" fill="#5fa3c4"/>
-        <ellipse cx="560" cy="200" rx="95" ry="30" fill="#6fb2cf"/>
-        <g fill="#4f9a58" stroke="#2f6b3a" stroke-width="1"><rect x="500" y="190" width="26" height="10" rx="2"/><rect x="535" y="200" width="26" height="10" rx="2"/><rect x="575" y="188" width="26" height="10" rx="2"/><rect x="600" y="206" width="26" height="10" rx="2"/></g>
-        <ellipse cx="190" cy="345" rx="95" ry="28" fill="#6fb2cf"/>
-        <g fill="#4f9a58" stroke="#2f6b3a" stroke-width="1"><rect x="140" y="338" width="26" height="10" rx="2"/><rect x="185" y="346" width="26" height="10" rx="2"/><rect x="220" y="334" width="26" height="10" rx="2"/></g>
-        <g fill="#e9a65a"><path d="M150 362 q8-5 14 0 q-6 5-14 0z M200 360 q8-5 14 0 q-6 5-14 0z"/></g>
-        <path d="M60 180 C90 140 200 140 230 180 C200 205 90 205 60 180Z" fill="#d8bf8a"/>
-        <path d="M600 330 C630 295 730 295 760 330 C730 355 630 355 600 330Z" fill="#d8bf8a"/>
-        <ellipse cx="400" cy="345" rx="30" ry="10" fill="#d8bf8a"/>
-        <g fill="#3f7d4e"><circle cx="100" cy="170" r="10"/><circle cx="150" cy="168" r="12"/><circle cx="190" cy="172" r="10"/><circle cx="690" cy="320" r="12"/><circle cx="400" cy="337" r="8"/></g>
-        <g fill="#3a3a3a"><ellipse cx="330" cy="200" rx="18" ry="9"/><circle cx="314" cy="196" r="6"/><ellipse cx="380" cy="210" rx="16" ry="8"/><circle cx="366" cy="206" r="5"/></g>
-        <g stroke="#7a6a2e" stroke-width="2"><path d="M270 240 V215 M280 240 V208 M290 240 V218 M460 240 V214 M470 240 V206"/></g>
-        <g><path d="M440 283 L486 283 L479 291 L447 291Z" fill="#f2f2ee"/><rect x="458" y="273" width="10" height="10" fill="#2f6b8f"/></g>
-        <g fill="none" stroke="#2f3d36" stroke-width="2"><path d="M300 80 q8-7 16 0 q8-7 16 0"/><path d="M340 98 q7-6 14 0 q7-6 14 0"/></g>
-        <text x="20" y="34" font-family="system-ui" font-size="18" font-weight="700" fill="#1f3a31">Morgen · renaturiert und produktiv</text>
-        <text x="20" y="56" font-family="system-ui" font-size="13" fill="#2f4d42">Melioration stillgelegt · Paludikultur, Wasserbüffel, Fisch, Schwimmbeete, Bootswege</text>
-      </svg>
+      <img class="on" src="img/damals.jpg" alt="Um 1700: Luch mit Fließen, Bruchwald, Dorf auf der Sandinsel und Fischer im Kahn">
+      <img src="img/heute.jpg" alt="Heute: entwässerte Fläche mit geraden Gräben, Schöpfwerk und Traktor im Staub">
+      <img src="img/morgen.jpg" alt="Morgen: wiedervernässt mit Schwimmbeeten, Wasserbüffeln, Steg, Boot und Hof">
+      <span class="tag">Um 1700</span>
     </div>
     <div class="cap">
       <div class="on"><b>Um 1700</b>Wasser in der Fläche. Torf wächst, speichert CO₂. Fisch, Heu und Rohr ernähren die Dörfer auf den Ländchen.</div>
       <div><b>Heute</b>Wasser wird abgepumpt. Der Torf zerfällt, setzt CO₂ frei, der Boden sackt. In Trockenjahren brechen die Erträge ein.</div>
       <div><b>Morgen</b>Wasser bleibt in der Fläche – und wird zur Einnahmequelle: Gemüse auf Schwimmbeeten, Fisch, Weide, Rohstoffe, Besucher.</div>
     </div>
+    <h3 class="sub3" style="margin-top:44px">Vorher / Nachher – zieh den Regler</h3>
+    <div class="ba" id="ba">
+      <img src="img/morgen.jpg" alt="Morgen mit AR-AWS">
+      <div class="ba-top"><img src="img/heute.jpg" alt="Heute entwässert"></div>
+      <div class="ba-line"></div>
+      <span class="ba-l">Heute</span><span class="ba-r">Morgen</span>
+      <input type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher-Regler">
+    </div
+>
   </div>
 </section>
 
@@ -341,6 +278,7 @@
     <h2><small>Anbau · Back to the Roots</small>Alles, was der Acker kann – und mehr.</h2>
     <p class="intro">AR-AWS heißt nicht: nur noch Schilf und Kräuter. Auf den <strong>trockenen Ländchen, Bermen und angrenzenden Mineralböden</strong> wächst weiterhin alles, was heute auf dem Acker steht – Getreide, Kartoffeln, Rüben, Hülsenfrüchte, Gemüse. Neu dazu kommen die <strong>nassen Zonen</strong> mit eigenen Kulturen: Schwimmbeete, Fischteich, Paludikultur. Und es ist die Chance für ein Umdenken – zurück zu robusten, regionalen Sorten, die hier jahrhundertelang zu Hause waren:</p>
 
+    <img class="photo-band" src="img/ernte.jpg" alt="Pastinaken, Emmer, Ackerbohnen, Brunnenkresse und Karpfen auf einem Holztisch" loading="lazy">
     <div class="swaps">
       <div><span class="from">Kartoffel</span><span class="arr">→</span><span class="to">Pastinake</span><small>frosthart, süßlich, war vor der Kartoffel das Wurzelgemüse Europas</small></div>
       <div><span class="from">Hochleistungsweizen</span><span class="arr">→</span><span class="to">Emmer &amp; Einkorn</span><small>Urgetreide, genügsam, gefragt in Bio-Bäckereien</small></div>
@@ -350,6 +288,7 @@
       <div><span class="from">Mineralwolle</span><span class="arr">→</span><span class="to">Rohrkolben &amp; Schilf</span><small>Bau- und Dämmstoff direkt aus der nassen Fläche</small></div>
     </div>
 
+    <img class="photo-band" src="img/schwimmbeet.jpg" alt="Schwimmbeet mit Brunnenkresse und Erntekorb, darunter ein Karpfen im klaren Wasser" loading="lazy">
     <h3 class="sub3">Die 12 Säulen des Anbaus</h3>
     <div class="pillars">
       <div><i>R</i><b>Urgetreide</b><span>Emmer, Einkorn – auf trockenen Bermen</span></div>
@@ -411,11 +350,12 @@
 
 <script>
   // Damals / Heute / Morgen umschalten
-  const btns=[...document.querySelectorAll('.tabs button')], scenes=[...document.querySelectorAll('.stage svg')], caps=[...document.querySelectorAll('.cap div')];
+  const btns=[...document.querySelectorAll('.tabs button')], scenes=[...document.querySelectorAll('.stage img')], caps=[...document.querySelectorAll('.cap div')];
   let cur=0, auto=true;
-  function show(i){cur=i;btns.forEach((b,k)=>b.classList.toggle('on',k===i));scenes.forEach((s,k)=>s.classList.toggle('on',k===i));caps.forEach((c,k)=>c.classList.toggle('on',k===i));}
+  function show(i){cur=i;btns.forEach((b,k)=>b.classList.toggle('on',k===i));scenes.forEach((s,k)=>s.classList.toggle('on',k===i));caps.forEach((c,k)=>c.classList.toggle('on',k===i));document.querySelector('.stage .tag').textContent=['Um 1700','Heute','Morgen mit AR-AWS'][i];}
   btns.forEach(b=>b.addEventListener('click',()=>{auto=false;show(+b.dataset.s)}));
   setInterval(()=>{if(auto)show((cur+1)%3)},5000);
+  const ba=document.getElementById('ba'); if(ba){ba.querySelector('input').addEventListener('input',e=>ba.style.setProperty('--p',e.target.value+'%'))}
   // Balken animieren, sobald sichtbar
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%');io.unobserve(e.target)}}),{threshold:.3});
   document.querySelectorAll('.bars').forEach(b=>io.observe(b));
