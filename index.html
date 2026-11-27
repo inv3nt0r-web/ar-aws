@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR-AWS – Das Havelländische Luch wieder nass machen · Win-win für Landwirte, Klima und Natur</title>
+  <meta name="description" content="Offenes Konzept zur Wiedervernässung des Havelländischen Luchs: Melioration stilllegen, 10-ha-Pilotkern, Paludikultur, Schwimmbeete und Fisch. Im mittleren Fall rund 13.000 € Überschuss je 10 ha und Jahr – mehr als heute, und gut für Klima und Natur. Frei nutzbar (CC BY 4.0).">
+  <link rel="canonical" href="https://inv3nt0r-web.github.io/ar-aws/">
+  <meta property="og:title" content="Das Luch wieder nass machen – und damit Geld verdienen">
+  <meta property="og:description" content="Vom entwässerten Acker zurück zur produktiven Auenlandschaft: Win-win für Landwirte, Klima und Natur. Offenes Konzept mit 10-ha-Pilotkern.">
+  <meta property="og:image" content="https://inv3nt0r-web.github.io/ar-aws/luch.jpg">
+  <meta property="og:url" content="https://inv3nt0r-web.github.io/ar-aws/">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://inv3nt0r-web.github.io/ar-aws/luch.jpg">
+  <meta name="citation_title" content="Das Aquaponisch-Retentionsbasierte Agrarsystem (AR-AWS): Renaturierung der historischen Luch-Wasserlandschaft – Konzept-Dossier v1.0">
+  <meta name="citation_author" content="Seyffarth, Daniel">
+  <meta name="citation_publication_date" content="2026/10">
+  <meta name="citation_doi" content="10.5281/zenodo.23521417">
+  <meta name="citation_language" content="de">
+  <meta name="citation_abstract_html_url" content="https://inv3nt0r-web.github.io/ar-aws/">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Das Aquaponisch-Retentionsbasierte Agrarsystem (AR-AWS)","alternativeHeadline":"Aquaponic Retention-Based Agricultural Water System – rewetting the Havelland fen (Brandenburg)","author":{"@type":"Person","name":"Daniel Seyffarth","address":"Berlin"},"datePublished":"2026-10","inLanguage":"de","license":"https://creativecommons.org/licenses/by/4.0/","identifier":"https://doi.org/10.5281/zenodo.23521417","sameAs":["https://doi.org/10.5281/zenodo.23521417"],"image":"https://inv3nt0r-web.github.io/ar-aws/luch.jpg","keywords":"Wiedervernässung, Paludikultur, Niedermoor, Havelland, Havelländisches Luch, Moorschutz, Schwimmbeete, Aquakultur, rewetting, paludiculture, fen peat"}
+  </script>
+  <style>
+    :root{
+      --ink:#0f1a16; --deep:#13241e; --panel:#182d26; --panel2:#1f3a31; --line:#2c4a3f;
+      --text:#e9f1ec; --muted:#9db4a8; --reed:#c9b26a; --reed2:#e3cf8c; --water:#5fa3c4; --water2:#9fd3ea;
+      --moss:#6fbf8f; --leaf:#9fdcb3; --sun:#f3c96b; --earth:#a8835a;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--ink);color:var(--text);font-family:Georgia,'Iowan Old Style','Palatino Linotype',serif;font-size:19px;line-height:1.75}
+    a{color:var(--water2)} a:hover{color:#fff}
+    .sans{font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+
+    /* HERO */
+    .hero{position:relative;min-height:clamp(560px,92vh,820px);display:flex;align-items:flex-end;overflow:hidden;background:#cfe3dc}
+    .hero svg.scene{position:absolute;inset:0;width:100%;height:100%}
+    .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,26,22,0) 35%,rgba(15,26,22,.55) 70%,rgba(15,26,22,.95) 100%)}
+    .hero .copy{position:relative;z-index:2;max-width:980px;margin:0 auto;padding:0 24px 64px;text-align:center}
+    .eyebrow{font-family:system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;color:var(--reed2)}
+    .hero h1{font-size:clamp(2.2rem,6vw,4.2rem);line-height:1.05;margin:12px 0 14px;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.45)}
+    .hero p.lead{font-size:clamp(1.05rem,2.2vw,1.3rem);color:#e8f3ee;max-width:760px;margin:0 auto}
+    .pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:24px}
+    .pill{background:rgba(19,36,30,.75);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-family:system-ui,sans-serif;font-size:.8rem}
+    .pill span{color:var(--muted);margin-right:6px}
+    .wave{animation:drift 9s ease-in-out infinite alternate}
+    .wave2{animation:drift 12s ease-in-out infinite alternate-reverse}
+    @keyframes drift{from{transform:translateX(-18px)}to{transform:translateX(18px)}}
+    .crane{animation:fly 26s linear infinite}
+    .crane.b{animation-duration:31s;animation-delay:-9s}
+    .crane.c{animation-duration:36s;animation-delay:-18s}
+    @keyframes fly{from{transform:translate(-160px,0)}to{transform:translate(1400px,-60px)}}
+    .boat{animation:bob 4s ease-in-out infinite alternate}
+    @keyframes bob{from{transform:translate(0,0)}to{transform:translate(6px,-3px)}}
+    @media (prefers-reduced-motion:reduce){.wave,.wave2,.crane,.boat{animation:none}}
+
+    .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+    section.block{padding:80px 0}
+    h2{font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.15;color:#fff;margin-bottom:14px}
+    h2 small{display:block;font-family:system-ui,sans-serif;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--moss);margin-bottom:10px}
+    .intro{max-width:760px;color:#d8e6de}
+
+    /* DAMALS HEUTE MORGEN */
+    .tabs{display:flex;gap:8px;margin:28px 0 16px;flex-wrap:wrap}
+    .tabs button{font-family:system-ui,sans-serif;font-size:.95rem;font-weight:600;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:10px 20px;border-radius:999px;cursor:pointer;transition:.25s}
+    .tabs button.on{background:var(--moss);color:#0c1712;border-color:var(--moss)}
+    .stage{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/8;background:#0c1511}
+    .stage svg{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .7s ease}
+    .stage svg.on{opacity:1}
+    .cap{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+    .cap div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:.92rem;color:var(--muted);transition:.3s}
+    .cap div.on{border-color:var(--moss);color:var(--text);background:var(--panel2)}
+    .cap b{display:block;color:#fff;font-family:system-ui,sans-serif;font-size:.95rem;margin-bottom:4px}
+
+    /* WIN WIN */
+    .winwin{background:radial-gradient(1200px 500px at 50% 0%,#1f3a31 0%,var(--ink) 70%)}
+    .big{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center;margin-top:30px}
+    .bars{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px}
+    .bar{margin:16px 0}
+    .bar .lbl{display:flex;justify-content:space-between;font-family:system-ui,sans-serif;font-size:.9rem;color:var(--muted);margin-bottom:6px}
+    .bar .lbl b{color:#fff}
+    .bar .track{height:18px;background:#0e1814;border-radius:9px;overflow:hidden}
+    .bar .fill{height:100%;border-radius:9px;width:0;transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+    .fill.now{background:linear-gradient(90deg,#8a6a45,#b08a5c)}
+    .fill.mid{background:linear-gradient(90deg,#3f9a6e,var(--moss))}
+    .fill.opt{background:linear-gradient(90deg,var(--moss),var(--leaf))}
+    .note{font-family:system-ui,sans-serif;font-size:.78rem;color:var(--muted);margin-top:12px}
+    .stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .stat{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:18px}
+    .stat b{display:block;font-family:system-ui,sans-serif;font-size:2rem;color:var(--leaf);line-height:1.1}
+    .stat span{font-family:system-ui,sans-serif;font-size:.85rem;color:var(--muted)}
+    .who{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:34px}
+    .who div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 14px;text-align:center}
+    .who .ico{font-size:2rem;background:none!important;border:0!important;padding:0!important}
+    .who b{display:block;color:#fff;font-family:system-ui,sans-serif;margin:6px 0 4px}
+    .who p{font-size:.86rem;color:var(--muted);line-height:1.5}
+    .streams{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+    .streams span{font-family:system-ui,sans-serif;font-size:.85rem;background:#0e1814;border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+
+    /* MODUL */
+    .ring{display:grid;grid-template-columns:340px 1fr;gap:34px;align-items:center;margin-top:24px}
+    .legend div{display:flex;gap:14px;align-items:flex-start;margin:14px 0}
+    .dot{width:16px;height:16px;border-radius:50%;margin-top:7px;flex:none}
+    .legend b{color:#fff;font-family:system-ui,sans-serif}
+    .legend p{color:var(--muted);font-size:.95rem;line-height:1.55}
+
+    /* STEPS */
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;counter-reset:s}
+    .step{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;position:relative}
+    .step:before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:20px;width:34px;height:34px;border-radius:50%;background:var(--moss);color:#0c1712;font:700 1rem system-ui;display:grid;place-items:center}
+    .step b{display:block;color:#fff;font-family:system-ui,sans-serif;margin-top:6px}
+    .step em{color:var(--reed2);font-style:normal;font-family:system-ui,sans-serif;font-size:.85rem}
+    .step p{color:var(--muted);font-size:.93rem;margin-top:8px;line-height:1.55}
+
+    .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:24px}
+    .pillars div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;font-family:system-ui,sans-serif;font-size:.85rem}
+    .pillars div b{display:block;color:var(--leaf)}
+    .pillars div span{color:var(--muted)}
+
+    .swaps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0 10px}
+    .swaps div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
+    .swaps .from{font-family:system-ui,sans-serif;color:#b08a5c;text-decoration:line-through;font-size:.9rem}
+    .swaps .arr{margin:0 8px;color:var(--muted)}
+    .swaps .to{font-family:system-ui,sans-serif;color:var(--leaf);font-weight:700}
+    .swaps small{display:block;color:var(--muted);font-family:system-ui,sans-serif;font-size:.8rem;margin-top:6px;line-height:1.45}
+    .sub3{font-family:system-ui,sans-serif;font-size:1.05rem;color:#fff;margin:34px 0 0;letter-spacing:.02em}
+    .pillars div i{float:right;font-style:normal;font-size:.7rem;color:var(--reed2);border:1px solid var(--line);border-radius:6px;padding:0 5px}
+    figure{margin:30px 0}
+    figure img{width:100%;border-radius:12px;border:1px solid var(--line);background:#fff}
+    figcaption{font-family:system-ui,sans-serif;font-size:.8rem;color:var(--muted);margin-top:8px}
+
+    .quote{border-left:3px solid var(--reed);padding:6px 0 6px 22px;margin:26px 0;font-size:1.15rem;color:#f1efe2;font-style:italic}
+    .cta{display:inline-block;background:var(--moss);color:#0c1712;font-family:system-ui,sans-serif;font-weight:700;padding:14px 24px;border-radius:10px;text-decoration:none;margin:10px 10px 0 0}
+    .cta.alt{background:transparent;border:1px solid var(--moss);color:var(--leaf)}
+    .box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 26px;margin:22px 0}
+    .box .label{font-family:system-ui,sans-serif;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--moss)}
+    footer{border-top:1px solid var(--line);padding:30px 20px;text-align:center;color:var(--muted);font-family:system-ui,sans-serif;font-size:.8rem}
+
+    @media(max-width:860px){.swaps{grid-template-columns:1fr}.big,.ring{grid-template-columns:1fr}.who{grid-template-columns:repeat(2,1fr)}.steps,.cap{grid-template-columns:1fr}.pillars{grid-template-columns:repeat(2,1fr)}.stage{aspect-ratio:4/3}body{font-size:17px}}
+  </style>
+</head>
+<body>
+
+<!-- ======================= HERO ======================= -->
+<header class="hero">
+  <svg class="scene" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6d9a8"/><stop offset=".45" stop-color="#cfe3dc"/><stop offset="1" stop-color="#a9cfc4"/></linearGradient>
+      <linearGradient id="wat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fc6dc"/><stop offset="1" stop-color="#3f7f9c"/></linearGradient>
+      <radialGradient id="sunG"><stop offset="0" stop-color="#fff3cf"/><stop offset=".5" stop-color="#f6d68a" stop-opacity=".8"/><stop offset="1" stop-color="#f6d68a" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="1200" height="800" fill="url(#sky)"/>
+    <circle cx="880" cy="250" r="160" fill="url(#sunG)"/>
+    <circle cx="880" cy="250" r="46" fill="#fff1c8"/>
+    <!-- ferne Ländchen mit Wald -->
+    <path d="M0 430 C120 390 220 400 330 420 C420 380 520 385 610 415 C720 395 800 380 920 410 C1010 395 1110 400 1200 420 L1200 470 L0 470Z" fill="#7fa58f"/>
+    <path d="M60 425 q12-40 24 0 q10-34 22 0 q14-46 28 0 q10-30 20 0 M700 410 q12-44 26 0 q12-36 24 0 q12-40 26 0 q10-30 22 0 M960 412 q10-30 20 0 q12-40 24 0" fill="#5f8a74"/>
+    <!-- Dorf auf dem Ländchen -->
+    <g fill="#8b6e52"><rect x="420" y="398" width="22" height="16"/><polygon points="416,400 431,386 446,400"/><rect x="452" y="402" width="16" height="12"/><polygon points="449,404 460,394 471,404"/><rect x="478" y="380" width="6" height="34"/><polygon points="474,382 481,366 488,382"/></g>
+    <!-- Röhricht / Wiesen -->
+    <path d="M0 470 L1200 470 L1200 560 C900 540 600 585 300 560 C180 550 80 560 0 565Z" fill="#b9c98a"/>
+    <!-- Wasser -->
+    <path d="M0 560 C300 540 600 600 900 560 C1020 545 1120 550 1200 560 L1200 800 L0 800Z" fill="url(#wat)"/>
+    <g class="wave" stroke="#d6eef7" stroke-width="2" fill="none" opacity=".6"><path d="M80 620 q30-8 60 0 t60 0"/><path d="M420 660 q30-8 60 0 t60 0 t60 0"/><path d="M820 610 q30-8 60 0 t60 0"/></g>
+    <g class="wave2" stroke="#d6eef7" stroke-width="2" fill="none" opacity=".45"><path d="M220 700 q30-8 60 0 t60 0"/><path d="M640 730 q30-8 60 0 t60 0 t60 0"/><path d="M980 690 q30-8 60 0 t60 0"/></g>
+    <!-- Schilf vorne -->
+    <g stroke="#7a6a2e" stroke-width="3" stroke-linecap="round">
+      <path d="M40 800 Q46 650 30 560"/><path d="M60 800 Q70 640 80 540"/><path d="M85 800 Q90 680 70 600"/><path d="M110 800 Q115 660 125 575"/>
+      <path d="M1090 800 Q1080 650 1100 560"/><path d="M1120 800 Q1115 640 1135 545"/><path d="M1150 800 Q1150 670 1165 590"/><path d="M1175 800 Q1185 660 1190 570"/>
+    </g>
+    <g fill="#6b4a26"><ellipse cx="31" cy="560" rx="6" ry="22"/><ellipse cx="80" cy="542" rx="6" ry="22"/><ellipse cx="125" cy="576" rx="5" ry="18"/><ellipse cx="1100" cy="560" rx="6" ry="22"/><ellipse cx="1135" cy="546" rx="6" ry="22"/><ellipse cx="1190" cy="570" rx="5" ry="18"/></g>
+    <!-- Boot -->
+    <g class="boat"><path d="M560 600 L660 600 L645 616 L575 616Z" fill="#5b3b22"/><line x1="612" y1="600" x2="612" y2="555" stroke="#3a2614" stroke-width="3"/><circle cx="600" cy="590" r="6" fill="#3a2614"/><rect x="595" y="590" width="10" height="12" fill="#3a2614"/></g>
+    <!-- Kraniche -->
+    <g fill="none" stroke="#33433b" stroke-width="3" stroke-linecap="round">
+      <path class="crane" d="M0 170 q14-12 28 0 q14-12 28 0"/>
+      <path class="crane b" d="M0 210 q12-10 24 0 q12-10 24 0"/>
+      <path class="crane c" d="M0 140 q10-8 20 0 q10-8 20 0"/>
+    </g>
+  </svg>
+  <div class="veil"></div>
+  <div class="copy">
+    <span class="eyebrow">Offenes Konzept · Havelland · AR-AWS</span>
+    <h1>Das Luch wieder nass machen –<br>und davon leben können.</h1>
+    <p class="lead">Wie aus entwässertem Niedermoor wieder eine lebendige Auen- und Wasserlandschaft wird, die <strong>mehr Ertrag</strong> bringt als heute – für Landwirte, Klima und Natur zugleich.</p>
+    <div class="pills">
+      <div class="pill"><span>DOI</span><a href="https://doi.org/10.5281/zenodo.23521417" target="_blank" rel="noopener">10.5281/zenodo.23521417</a></div>
+      <div class="pill"><span>Lizenz</span>CC BY 4.0 – frei nutzbar</div>
+      <div class="pill"><span>Autor</span>Daniel Seyffarth, Berlin</div>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= DAMALS / HEUTE / MORGEN ======================= -->
+<section class="block">
+  <div class="wrap">
+    <h2><small>Eine Landschaft, drei Zustände</small>Damals. Heute. Morgen.</h2>
+    <p class="intro">Vor 300 Jahren war das Havelländische Luch – heute rund 30.000 ha zwischen Nauen, Friesack und Rhinow – eine nasse Niederung aus Bruchwald, Röhricht und Fließen. Daraus ragten die <em>Ländchen</em> wie Inseln, man fuhr mit dem Boot. Dann kamen Kanäle, Gräben, Dränagen und Schöpfwerke. Klick dich durch:</p>
+
+    <div class="tabs" role="tablist">
+      <button class="on" data-s="0" role="tab">🌿 Um 1700</button>
+      <button data-s="1" role="tab">🚜 Heute</button>
+      <button data-s="2" role="tab">💧 Morgen mit AR-AWS</button>
+    </div>
+
+    <div class="stage">
+      <!-- DAMALS -->
+      <svg class="on" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-label="Um 1700: nasse Luchlandschaft mit Ländchen, Fließen und Booten">
+        <rect width="800" height="400" fill="#cfe6dc"/>
+        <rect y="150" width="800" height="250" fill="#a9c98e"/>
+        <path d="M0 260 C120 230 200 300 330 270 C460 240 520 310 650 280 C720 265 760 270 800 262 L800 300 C760 305 720 300 650 318 C520 350 460 280 330 310 C200 340 120 270 0 300Z" fill="#6aa9c6"/>
+        <ellipse cx="560" cy="200" rx="70" ry="22" fill="#7cb7d0"/><ellipse cx="170" cy="345" rx="80" ry="24" fill="#7cb7d0"/>
+        <path d="M60 180 C90 140 200 140 230 180 C200 205 90 205 60 180Z" fill="#d8bf8a"/>
+        <path d="M600 330 C630 295 730 295 760 330 C730 355 630 355 600 330Z" fill="#d8bf8a"/>
+        <g fill="#8b6e52"><rect x="120" y="165" width="14" height="10"/><rect x="142" y="168" width="10" height="8"/><rect x="660" y="318" width="14" height="10"/></g>
+        <g fill="#4f7d5e"><circle cx="300" cy="175" r="14"/><circle cx="318" cy="170" r="12"/><circle cx="335" cy="178" r="13"/><circle cx="440" cy="168" r="12"/><circle cx="456" cy="174" r="14"/><circle cx="500" cy="360" r="12"/><circle cx="515" cy="366" r="11"/></g>
+        <g stroke="#8a7a3a" stroke-width="2"><path d="M20 400 V350 M30 400 V340 M40 400 V355 M770 250 V220 M780 250 V212 M790 250 V225 M380 240 V215 M390 240 V208"/></g>
+        <g><path d="M340 283 L380 283 L374 290 L346 290Z" fill="#5b3b22"/><line x1="360" y1="283" x2="360" y2="262" stroke="#3a2614" stroke-width="2"/></g>
+        <g fill="none" stroke="#2f3d36" stroke-width="2"><path d="M420 70 q8-7 16 0 q8-7 16 0"/><path d="M455 90 q7-6 14 0 q7-6 14 0"/><path d="M390 95 q6-5 12 0 q6-5 12 0"/></g>
+        <text x="20" y="34" font-family="system-ui" font-size="18" font-weight="700" fill="#1f3a31">Um 1700 · Luch und Ländchen</text>
+        <text x="20" y="56" font-family="system-ui" font-size="13" fill="#2f4d42">Fließe, Röhricht, Bruchwald · Fisch, Heu, Rohr · Verkehr per Boot</text>
+      </svg>
+      <!-- HEUTE -->
+      <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-label="Heute: entwässert mit geraden Gräben, Schöpfwerk und trockenem Boden">
+        <rect width="800" height="400" fill="#e8dcc4"/>
+        <rect y="150" width="800" height="250" fill="#cdb48a"/>
+        <g stroke="#b39a6e" stroke-width="1"><path d="M0 170 H800 M0 195 H800 M0 225 H800 M0 260 H800 M0 300 H800 M0 345 H800"/></g>
+        <g stroke="#6a9fb8" stroke-width="5"><path d="M0 250 H800"/><path d="M200 150 V400"/><path d="M420 150 V400"/><path d="M630 150 V400"/></g>
+        <path d="M60 180 C90 140 200 140 230 180 C200 205 90 205 60 180Z" fill="#c9a874"/>
+        <rect x="740" y="232" width="40" height="36" fill="#2b2f33"/><polygon points="736,234 760,214 784,234" fill="#3b4045"/>
+        <g fill="#7d6a4f"><rect x="480" y="300" width="46" height="22" rx="4"/><circle cx="490" cy="326" r="9"/><circle cx="518" cy="326" r="7"/></g>
+        <g fill="#cbb18a" opacity=".7"><circle cx="540" cy="306" r="10"/><circle cx="560" cy="300" r="14"/><circle cx="585" cy="296" r="9"/></g>
+        <g fill="#8e7b5a"><path d="M300 320 l6-14 6 14z M330 330 l5-12 5 12z M260 360 l6-14 6 14z"/></g>
+        <text x="20" y="34" font-family="system-ui" font-size="18" font-weight="700" fill="#4a3a22">Heute · entwässert</text>
+        <text x="20" y="56" font-family="system-ui" font-size="13" fill="#5e4b2e">Gerade Gräben, Dränagen, Schöpfwerk · Torfschwund, CO₂, Dürre-Ernten</text>
+        <text x="745" y="290" font-family="system-ui" font-size="11" fill="#2b2f33">Schöpfwerk</text>
+      </svg>
+      <!-- MORGEN -->
+      <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-label="Morgen mit AR-AWS: renaturiert und produktiv mit Schwimmbeeten, Fisch, Paludikultur und Booten">
+        <rect width="800" height="400" fill="#d6ece4"/>
+        <circle cx="690" cy="70" r="26" fill="#f6d68a"/>
+        <rect y="150" width="800" height="250" fill="#9fcf8e"/>
+        <path d="M0 260 C120 230 200 300 330 270 C460 240 520 310 650 280 C720 265 760 270 800 262 L800 300 C760 305 720 300 650 318 C520 350 460 280 330 310 C200 340 120 270 0 300Z" fill="#5fa3c4"/>
+        <ellipse cx="560" cy="200" rx="95" ry="30" fill="#6fb2cf"/>
+        <g fill="#4f9a58" stroke="#2f6b3a" stroke-width="1"><rect x="500" y="190" width="26" height="10" rx="2"/><rect x="535" y="200" width="26" height="10" rx="2"/><rect x="575" y="188" width="26" height="10" rx="2"/><rect x="600" y="206" width="26" height="10" rx="2"/></g>
+        <ellipse cx="190" cy="345" rx="95" ry="28" fill="#6fb2cf"/>
+        <g fill="#4f9a58" stroke="#2f6b3a" stroke-width="1"><rect x="140" y="338" width="26" height="10" rx="2"/><rect x="185" y="346" width="26" height="10" rx="2"/><rect x="220" y="334" width="26" height="10" rx="2"/></g>
+        <g fill="#e9a65a"><path d="M150 362 q8-5 14 0 q-6 5-14 0z M200 360 q8-5 14 0 q-6 5-14 0z"/></g>
+        <path d="M60 180 C90 140 200 140 230 180 C200 205 90 205 60 180Z" fill="#d8bf8a"/>
+        <path d="M600 330 C630 295 730 295 760 330 C730 355 630 355 600 330Z" fill="#d8bf8a"/>
+        <ellipse cx="400" cy="345" rx="30" ry="10" fill="#d8bf8a"/>
+        <g fill="#3f7d4e"><circle cx="100" cy="170" r="10"/><circle cx="150" cy="168" r="12"/><circle cx="190" cy="172" r="10"/><circle cx="690" cy="320" r="12"/><circle cx="400" cy="337" r="8"/></g>
+        <g fill="#3a3a3a"><ellipse cx="330" cy="200" rx="18" ry="9"/><circle cx="314" cy="196" r="6"/><ellipse cx="380" cy="210" rx="16" ry="8"/><circle cx="366" cy="206" r="5"/></g>
+        <g stroke="#7a6a2e" stroke-width="2"><path d="M270 240 V215 M280 240 V208 M290 240 V218 M460 240 V214 M470 240 V206"/></g>
+        <g><path d="M440 283 L486 283 L479 291 L447 291Z" fill="#f2f2ee"/><rect x="458" y="273" width="10" height="10" fill="#2f6b8f"/></g>
+        <g fill="none" stroke="#2f3d36" stroke-width="2"><path d="M300 80 q8-7 16 0 q8-7 16 0"/><path d="M340 98 q7-6 14 0 q7-6 14 0"/></g>
+        <text x="20" y="34" font-family="system-ui" font-size="18" font-weight="700" fill="#1f3a31">Morgen · renaturiert und produktiv</text>
+        <text x="20" y="56" font-family="system-ui" font-size="13" fill="#2f4d42">Melioration stillgelegt · Paludikultur, Wasserbüffel, Fisch, Schwimmbeete, Bootswege</text>
+      </svg>
+    </div>
+    <div class="cap">
+      <div class="on"><b>Um 1700</b>Wasser in der Fläche. Torf wächst, speichert CO₂. Fisch, Heu und Rohr ernähren die Dörfer auf den Ländchen.</div>
+      <div><b>Heute</b>Wasser wird abgepumpt. Der Torf zerfällt, setzt CO₂ frei, der Boden sackt. In Trockenjahren brechen die Erträge ein.</div>
+      <div><b>Morgen</b>Wasser bleibt in der Fläche – und wird zur Einnahmequelle: Gemüse auf Schwimmbeeten, Fisch, Weide, Rohstoffe, Besucher.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= WIN-WIN ======================= -->
+<section class="block winwin" id="winwin">
+  <div class="wrap">
+    <h2><small>Wirtschaftlichkeit</small>Win-win: Mehr Ertrag – diesmal <em>mit</em> der Natur.</h2>
+    <p class="intro">Die Entwässerung hat die Landschaft produktiv gemacht – auf Kosten von Boden, Wasser und Klima. AR-AWS dreht das um: Das nasse Luch soll <strong>mehr</strong> abwerfen als der trockene Grenzacker. Die Rechnung im Dossier, je 10-ha-Modul und Jahr:</p>
+
+    <div class="big">
+      <div class="bars">
+        <div class="bar"><div class="lbl"><span>Heute: entwässertes Grünland / Grenzacker</span><b>4.000–6.000 €</b></div><div class="track"><div class="fill now" data-w="9"></div></div></div>
+        <div class="bar"><div class="lbl"><span>AR-AWS, mittlerer Fall</span><b>≈ 13.230 €</b></div><div class="track"><div class="fill mid" data-w="24"></div></div></div>
+        <div class="bar"><div class="lbl"><span>AR-AWS, optimistischer Fall</span><b>≈ 56.010 €</b></div><div class="track"><div class="fill opt" data-w="100"></div></div></div>
+        <p class="note">Jährlicher Überschuss vor Abschreibung und Steuern. Der konservative Fall (hohe Kosten, wenig Förderung, kaum Absatz) ist nicht kostendeckend – entscheidend sind Förderung, Absatzwege und Arbeitskosten. Alle Werte: Planungsannahmen, Kapitel 13 des Dossiers.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>×2–3</b><span>Ertrag je Hektar gegenüber heute im mittleren Fall</span></div>
+        <div class="stat"><b>≈ 74 %</b><span>der Investition über Zuschüsse (mittlerer Fall: 256.150 € von 345.500 €)</span></div>
+        <div class="stat"><b>≈ 7 J.</b><span>Amortisation des Eigenanteils (mittel) – optimistisch ≈ 7 Monate</span></div>
+        <div class="stat"><b>60–80 T€</b><span>Überschuss pro Jahr auf 50 ha bei gesichertem Absatz plausibel</span></div>
+      </div>
+    </div>
+
+    <div class="streams">
+      <span>🥬 Brunnenkresse & Gemüse von Schwimmbeeten</span><span>🐟 Karpfen & Schleie, Direktvermarktung</span><span>🐃 Wasserbüffel- & Rinderweide</span><span>🌾 GAP-Förderung bleibt erhalten</span><span>💶 ANK- & Moorbodenschutz-Programme</span><span>🏗️ Rohrkolben & Schilf als Bau- und Dämmstoff</span><span>🚣 Führungen, Bildung, Forschung</span><span>🥡 Berliner Markt in Reichweite</span>
+    </div>
+
+    <div class="who">
+      <div><div class="ico">👩‍🌾</div><b>Landwirte</b><p>Stabile Einnahmen auch in Dürrejahren, neue Produkte, Förderung für den Umbau.</p></div>
+      <div><div class="ico">🌍</div><b>Klima</b><p>Nasser Torf hört auf zu zerfallen – entwässerte Moore gehören zu den größten CO₂-Quellen der Landwirtschaft.</p></div>
+      <div><div class="ico">🦢</div><b>Natur</b><p>Röhricht, Hecken, Erlen, offenes Wasser: Lebensraum für Kraniche, Amphibien, Wildbienen.</p></div>
+      <div><div class="ico">💧</div><b>Wasser</b><p>Wasser bleibt in der Region, Grundwasser steigt, Hochwasser wird gepuffert.</p></div>
+      <div><div class="ico">🏡</div><b>Region</b><p>Bootswege, Ländchen, Hofläden: eine Landschaft, die man wieder erleben will.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= DAS MODUL ======================= -->
+<section class="block">
+  <div class="wrap">
+    <h2><small>Das System</small>Ein 10-ha-Modul, drei Zonen.</h2>
+    <div class="ring">
+      <svg viewBox="0 0 200 200" aria-label="Flächenaufteilung 70 Prozent Paludikultur, 20 Prozent Wasser, 10 Prozent Ländchen">
+        <circle cx="100" cy="100" r="80" fill="none" stroke="#6fbf8f" stroke-width="34" stroke-dasharray="351.9 502.7" transform="rotate(-90 100 100)"/>
+        <circle cx="100" cy="100" r="80" fill="none" stroke="#5fa3c4" stroke-width="34" stroke-dasharray="100.5 502.7" stroke-dashoffset="-351.9" transform="rotate(-90 100 100)"/>
+        <circle cx="100" cy="100" r="80" fill="none" stroke="#d8bf8a" stroke-width="34" stroke-dasharray="50.3 502.7" stroke-dashoffset="-452.4" transform="rotate(-90 100 100)"/>
+        <text x="100" y="96" text-anchor="middle" font-family="system-ui" font-size="22" font-weight="700" fill="#fff">10 ha</text>
+        <text x="100" y="118" text-anchor="middle" font-family="system-ui" font-size="11" fill="#9db4a8">Pilotkern</text>
+      </svg>
+      <div class="legend">
+        <div><span class="dot" style="background:#6fbf8f"></span><p><b>≈ 70 % Paludikultur.</b> Nasses Grünland mit Beweidung, Rohrkolben, Seggen – bleibt nach GAP förderfähig.</p></div>
+        <div><span class="dot" style="background:#5fa3c4"></span><p><b>≈ 20 % offenes Wasser.</b> Tiefenzone, extensive Fischhaltung heimischer Arten und Schwimmbeete im Rotationsmosaik – per Seilzug oder autonomem Boot. Mindestens 60–70 % der Wasserfläche bleiben als Lichtfenster frei.</p></div>
+        <div><span class="dot" style="background:#d8bf8a"></span><p><b>≈ 10 % Ländchen &amp; Horste.</b> Aus dem Aushub: Hecken, Schwarzerlen, Wege, Anleger.</p></div>
+      </div>
+    </div>
+
+    <figure>
+      <img src="luch.jpg" alt="Schema aus dem Dossier: um 1700, heute, Ziel" loading="lazy">
+      <figcaption>Abbildung 1 aus dem Dossier: vom Luch zur Entwässerungslandschaft und zurück.</figcaption>
+    </figure>
+
+    <div class="steps">
+      <div class="step"><b>Pilotkern</b><em>≈ 10 ha · ca. 2 Jahre bis Regelbetrieb</em><p>Einzeln flutbare Sektionen, Erprobung von Wasserbau, Schwimmbeeten, Fisch und Paludikultur – wissenschaftlich begleitet.</p></div>
+      <div class="step"><b>Erweiterung</b><em>50–300 ha</em><p>Angrenzende Flächen schließen an; Module teilen sich Deiche und Gräben – die Investition je Modul sinkt um 15–30 %.</p></div>
+      <div class="step"><b>Ganzes Gebiet</b><em>Einzugsgebiet</em><p>Schöpfwerke gehen außer Betrieb, Hauptgräben werden angehoben, die Fließe kehren zurück.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 12 SÄULEN ======================= -->
+<section class="block" style="padding-top:20px">
+  <div class="wrap">
+    <h2><small>Anbau · Back to the Roots</small>Alles, was der Acker kann – und mehr.</h2>
+    <p class="intro">AR-AWS heißt nicht: nur noch Schilf und Kräuter. Auf den <strong>trockenen Ländchen, Bermen und angrenzenden Mineralböden</strong> wächst weiterhin alles, was heute auf dem Acker steht – Getreide, Kartoffeln, Rüben, Hülsenfrüchte, Gemüse. Neu dazu kommen die <strong>nassen Zonen</strong> mit eigenen Kulturen: Schwimmbeete, Fischteich, Paludikultur. Und es ist die Chance für ein Umdenken – zurück zu robusten, regionalen Sorten, die hier jahrhundertelang zu Hause waren:</p>
+
+    <div class="swaps">
+      <div><span class="from">Kartoffel</span><span class="arr">→</span><span class="to">Pastinake</span><small>frosthart, süßlich, war vor der Kartoffel das Wurzelgemüse Europas</small></div>
+      <div><span class="from">Hochleistungsweizen</span><span class="arr">→</span><span class="to">Emmer &amp; Einkorn</span><small>Urgetreide, genügsam, gefragt in Bio-Bäckereien</small></div>
+      <div><span class="from">Importierte Soja</span><span class="arr">→</span><span class="to">Ackerbohne, Erbse, Wasserlinse</span><small>Eiweiß aus der Region, Stickstoff aus der Luft</small></div>
+      <div><span class="from">Salat aus Spanien</span><span class="arr">→</span><span class="to">Brunnenkresse</span><small>wächst auf den Schwimmbeeten, ganzjährig frisch</small></div>
+      <div><span class="from">Zuchtlachs</span><span class="arr">→</span><span class="to">Karpfen &amp; Schleie</span><small>Teichwirtschaft wie in Linum und der Lausitz</small></div>
+      <div><span class="from">Mineralwolle</span><span class="arr">→</span><span class="to">Rohrkolben &amp; Schilf</span><small>Bau- und Dämmstoff direkt aus der nassen Fläche</small></div>
+    </div>
+
+    <h3 class="sub3">Die 12 Säulen des Anbaus</h3>
+    <div class="pillars">
+      <div><i>R</i><b>Urgetreide</b><span>Emmer, Einkorn – auf trockenen Bermen</span></div>
+      <div><i>R</i><b>Pastinake</b><span>Wurzelgemüse statt Kartoffel</span></div>
+      <div><i>R</i><b>Rüben &amp; Möhren</b><span>Rote Bete, Möhre – Hofsortiment</span></div>
+      <div><i>R/P</i><b>Hülsenfrüchte</b><span>Ackerbohne, Erbse, Klee</span></div>
+      <div><i>W</i><b>Wasserlinse</b><span>schnelles Eiweiß in Schwimmrahmen</span></div>
+      <div><i>W</i><b>Blattgemüse</b><span>Brunnenkresse auf Schwimmbeeten</span></div>
+      <div><i>W/R</i><b>Kräuter</b><span>Engelwurz, Mädesüß an nassen Säumen</span></div>
+      <div><i>R</i><b>Dornige Wächter</b><span>Weißdorn, Schlehe – Hecke, Wildobst</span></div>
+      <div><i>R/P</i><b>Baum-Anker</b><span>Schwarzerle – Holz, Uferschutz</span></div>
+      <div><i>W</i><b>Aquakultur</b><span>Karpfen, Schleie – extensiv</span></div>
+      <div><i>R</i><b>Bestäuber</b><span>Salweide, Blühstreifen</span></div>
+      <div><i>P/R</i><b>Faser &amp; Öl</b><span>Rohrkolben, Schilf als Baustoff</span></div>
+    </div>
+    <p class="note" style="margin-top:12px">R = trockene Ländchen/Bermen (klassischer Ackerbau möglich) · W = Wasser/Schwimmbeete · P = Paludikultur (nasses Grünland). Die zwölf Säulen sind ein Startsortiment – auf den trockenen Flächen ist der gewohnte Fruchtwechsel weiterhin möglich.</p>
+  </div>
+</section>
+
+<!-- ======================= STIMMEN & FORSCHUNG ======================= -->
+<section class="block" style="padding-top:20px">
+  <div class="wrap">
+    <h2><small>Fachliche Resonanz</small>Was ein Pilot klären soll</h2>
+    <p class="intro">Fachleute der Hochschule für nachhaltige Entwicklung Eberswalde haben das Konzept positiv aufgenommen und auf das ANK-Leuchtturmprojekt Havelluch sowie die Linumer Teiche verwiesen. Offene Fragen, die ein begleiteter Pilot beantworten soll:</p>
+    <div class="who" style="grid-template-columns:repeat(3,1fr)">
+      <div><div class="ico">🌫️</div><b>Emissionen</b><p>CO₂ und Methan je Bewirtschaftungskammer.</p></div>
+      <div><div class="ico">🧪</div><b>Nährstoffe</b><p>Phosphor aus dem Torf, Einträge aus dem Vorfluter.</p></div>
+      <div><div class="ico">🦅</div><b>Biodiversität</b><p>Artenvielfalt – und Abstimmung mit Schutzzielen wie der Großtrappe.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= WARUM FREI ======================= -->
+<section class="block" style="padding-top:20px">
+  <div class="wrap">
+    <h2><small>Haltung</small>Frei nutzbar. Für alle.</h2>
+    <p class="quote">„Ich habe sechs Jahre im Havelland gelebt, fünf davon auf einem alten Großbauernhof, und ein Jahr in einer LPG gearbeitet. Die Probleme mit den trockengelegten Moorböden habe ich aus nächster Nähe erlebt.“</p>
+    <p class="intro">Das Konzept steht unter <strong>CC BY 4.0</strong>: Landwirte, Gemeinden, Wasser- und Bodenverbände, Forschung und Naturschutz dürfen es frei verwenden, verändern und umsetzen. Wer eine Fläche, eine Idee, Kritik oder Interesse an einem Pilotprojekt hat – ich freue mich über jede Nachricht, gern auch zu einem Treffen vor Ort im Luch.</p>
+    <p>
+      <a class="cta" href="https://doi.org/10.5281/zenodo.23521417" target="_blank" rel="noopener">📄 Dossier lesen (32 S., PDF)</a>
+      <a class="cta alt" href="mailto:seyffarthd@icloud.com?subject=AR-AWS%20Havell%C3%A4ndisches%20Luch">✉️ Kontakt aufnehmen</a>
+    </p>
+
+    <div class="box">
+      <span class="label">Abstract (English)</span>
+      <p>Large parts of the Havelland region (Brandenburg, Germany) consist of fen peat drained since the 1960s–80s. This open concept paper proposes AR-AWS: restoring the drainage-altered water system from a 10-ha pilot core, fully decommissioning legacy drainage. About 70 % of the module is paludiculture, about 20 % a pond with extensive native fish polyculture and rotating floating beds (open water ≥ 60–70 %), about 10 % dikes, hedgerows and alder belts. In the central case the module yields roughly €13,000 surplus per year – more than today's drained land – with roughly three quarters of the investment covered by grants. A scientifically monitored pilot is recommended. Free to use under CC BY 4.0.</p>
+    </div>
+    <div class="box">
+      <span class="label">Zitierhinweis</span>
+      <p>Seyffarth, D. (2026): Das Aquaponisch-Retentionsbasierte Agrarsystem (AR-AWS). Renaturierung der historischen Luch-Wasserlandschaft – Konzept-Dossier, Version 1.0. Zenodo. <a href="https://doi.org/10.5281/zenodo.23521417">https://doi.org/10.5281/zenodo.23521417</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  AR-AWS · Daniel Seyffarth, Berlin · CC BY 4.0 · Konzeptpapier, nicht peer-reviewed · Alle Zahlen sind Planungsannahmen in Bandbreiten<br>
+  Weitere Arbeit: <a href="https://inv3nt0r-web.github.io/der-schwebende-koerper/">Der schwebende Körper – zum römischen Dodekaeder</a>
+</footer>
+
+<script>
+  // Damals / Heute / Morgen umschalten
+  const btns=[...document.querySelectorAll('.tabs button')], scenes=[...document.querySelectorAll('.stage svg')], caps=[...document.querySelectorAll('.cap div')];
+  let cur=0, auto=true;
+  function show(i){cur=i;btns.forEach((b,k)=>b.classList.toggle('on',k===i));scenes.forEach((s,k)=>s.classList.toggle('on',k===i));caps.forEach((c,k)=>c.classList.toggle('on',k===i));}
+  btns.forEach(b=>b.addEventListener('click',()=>{auto=false;show(+b.dataset.s)}));
+  setInterval(()=>{if(auto)show((cur+1)%3)},5000);
+  // Balken animieren, sobald sichtbar
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%');io.unobserve(e.target)}}),{threshold:.3});
+  document.querySelectorAll('.bars').forEach(b=>io.observe(b));
+  setTimeout(()=>document.querySelectorAll('.fill').forEach(f=>{if(!f.style.width)f.style.width=f.dataset.w+'%'}),2500);
+</script>
+</body>
+</html>
