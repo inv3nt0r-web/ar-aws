@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://inv3nt0r-web.github.io/ar-aws/sitemap.xml
